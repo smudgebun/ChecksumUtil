@@ -74,8 +74,8 @@ public static class Checksum
         catch(Exception e){
             path_error = e.ToString();
             is_path_valid = false;
+            file_error = path_error.Split(new string[] {"\r\n", "\r", "\n" }, StringSplitOptions.None);
         }
-        file_error = path_error.Split(new string[] {"\r\n", "\r", "\n" }, StringSplitOptions.None);
         }
 
 //cleans up imperfecions and checks if hashtype is valid
