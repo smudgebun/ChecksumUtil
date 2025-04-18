@@ -4,7 +4,7 @@ cross-platform app for checksums and cryptographic hashing! (...no macOS release
 > 
 > still in testing, if you see smth say smth
 > 
-> uses Godot for UI handling
+> made with love and Godot
 > 
 > ik its large, working on it
 > 
