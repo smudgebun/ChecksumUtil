@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://6x7dcslfjt0s"]
+[gd_scene load_steps=4 format=3 uid="uid://6x7dcslfjt0s"]
 
 [ext_resource type="Script" uid="uid://dl48ul6h2xki2" path="res://Scripts/UI.cs" id="2_nxvpl"]
 [ext_resource type="Theme" uid="uid://cug86yo84bgba" path="res://resources/new_theme.tres" id="3_dewlx"]
+
+[sub_resource type="Theme" id="Theme_nxvpl"]
 
 [node name="UI" type="Node2D"]
 
@@ -16,31 +18,43 @@ metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Filepath" type="LineEdit" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_dewlx")
-placeholder_text = "Input Filepath"
-
-[node name="Hash" type="LineEdit" parent="Control/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_dewlx")
-placeholder_text = "Input Hash"
+placeholder_text = "Filepath"
 
 [node name="Hashtype" type="LineEdit" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_dewlx")
-placeholder_text = "Input Hashtype"
+placeholder_text = "Checktype"
+
+[node name="Hash" type="LineEdit" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_dewlx")
+placeholder_text = "Hash"
+
+[node name="OutputLength" type="LineEdit" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_dewlx")
+placeholder_text = "Output Length"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("3_dewlx")
+bbcode_enabled = true
 text = "Press Enter to run"
+selection_enabled = true
 
 [node name="Bg" type="ColorRect" parent="Control"]
 z_index = -2
@@ -54,5 +68,23 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="LoadTime" type="Timer" parent="."]
-wait_time = 0.449
+wait_time = 0.1
 one_shot = true
+
+[node name="DebugLabel" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 720.0
+offset_top = 564.0
+offset_right = 1147.0
+offset_bottom = 646.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = SubResource("Theme_nxvpl")
+fit_content = true

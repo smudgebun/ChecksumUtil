@@ -15,7 +15,12 @@ run/main_scene="res://Scenes/UI.tscn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="uid://diwnmwpcgrnkq"
+config/icon="uid://dnum1pbd3c0ty"
+
+[display]
+
+window/size/resizable=false
+window/size/sharp_corners=true
 
 [dotnet]
 

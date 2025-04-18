@@ -1,7 +1,15 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cug86yo84bgba"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cug86yo84bgba"]
 
-[ext_resource type="StyleBox" uid="uid://mraeqeb41ups" path="res://resources/new_style_box_flat.tres" id="1_amlv4"]
+[ext_resource type="StyleBox" uid="uid://mraeqeb41ups" path="res://resources/new_style_box_flat.tres" id="1_2a54a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2a54a"]
+texture_margin_left = 6.0
 
 [resource]
-LineEdit/styles/focus = ExtResource("1_amlv4")
-LineEdit/styles/normal = ExtResource("1_amlv4")
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/styles/focus = ExtResource("1_2a54a")
+LineEdit/styles/normal = ExtResource("1_2a54a")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/selection_color = Color(1, 1, 1, 0.592157)
+RichTextLabel/styles/focus = SubResource("StyleBoxTexture_2a54a")
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_2a54a")
